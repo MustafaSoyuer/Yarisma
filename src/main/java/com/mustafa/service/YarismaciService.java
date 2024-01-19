@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class YarismaciService {
 
-    private final YarismaciRepository yarismaciRepository;
+    @Autowired
+    private YarismaciRepository yarismaciRepository;
+
     public void save(Yarismaci yarismaci) {
         yarismaciRepository.save(yarismaci);
     }

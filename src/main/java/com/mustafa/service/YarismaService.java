@@ -10,10 +10,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+
 public class YarismaService {
 
-    private final YarismaRepository yarismaRepository;
+    @Autowired
+    private  YarismaRepository yarismaRepository;
 
     public void save(Yarisma yarisma) {
         yarismaRepository.save(yarisma);

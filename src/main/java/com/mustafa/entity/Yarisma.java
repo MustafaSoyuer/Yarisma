@@ -31,5 +31,5 @@ public class Yarisma {
      * 2->...
      */
     @ElementCollection
-    Map<Integer, String> odulleri;
+    Map<Integer, String> oduller;
 }

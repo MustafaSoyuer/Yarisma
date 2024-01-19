@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class PuanlamaService {
 
-    private final PuanlamaRepository puanlamaRepository;
+    @Autowired
+    private PuanlamaRepository puanlamaRepository;
 
     public void save(Puanlama puanlama){
         puanlamaRepository.save(puanlama);

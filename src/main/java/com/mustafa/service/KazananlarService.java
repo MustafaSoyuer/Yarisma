@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class KazananlarService {
 
-    private final KazananlarRespository kazananlarRespository;
+    @Autowired
+    private KazananlarRespository kazananlarRespository;
 
     public void save(Kazananlar kazanan){
         kazananlarRespository.save(kazanan);

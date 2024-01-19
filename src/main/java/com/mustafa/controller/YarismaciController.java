@@ -14,13 +14,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/yarismaci")
-@RequiredArgsConstructor
 public class YarismaciController {
 
-    private final YarismaciService yarismaciService;
+    @Autowired
+    private YarismaciService yarismaciService;
 
-    @GetMapping("/save")
-    public void save(String ad,String username,String avatar, String email){
+    @GetMapping("/save1")
+    public void save1(String ad,String username,String avatar, String email){
         Yarismaci yarismaci = Yarismaci.builder()
                 .ad(ad)
                 .username(username)
@@ -30,9 +30,37 @@ public class YarismaciController {
         yarismaciService.save(yarismaci);
     }
 
+    @PostMapping("/save")
+    public void save(){
+        Yarismaci yarismaci1 = Yarismaci.builder()
+                .ad("Ahmet")
+                .username("ahmett")
+                .avatar("avatar1.png")
+                .email("ahmet@gmail.com")
+                .build();
+        yarismaciService.save(yarismaci1);
+
+        Yarismaci yarismaci2 = Yarismaci.builder()
+                .ad("Ali")
+                .username("alli")
+                .avatar("avatar2.png")
+                .email("ali@gmail.com")
+                .build();
+        yarismaciService.save(yarismaci2);
+
+        Yarismaci yarismaci3 = Yarismaci.builder()
+                .ad("Veli")
+                .username("velli")
+                .avatar("avatar3.png")
+                .email("veli@gmail.com")
+                .build();
+        yarismaciService.save(yarismaci3);
+    }
+
     @GetMapping("/findAll")
     public List<Yarismaci> findAll(){
         return yarismaciService.findAll();
     }
+
 
 }
