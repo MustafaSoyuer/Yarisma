@@ -20,4 +20,8 @@ public class PuanlamaService {
     public List<Puanlama> findAll(){
         return puanlamaRepository.findAll();
     }
+
+    public Puanlama findTopByOrderByPuanDesc(){
+        return puanlamaRepository.findTopByOrderByPuanDesc();
+    }
 }

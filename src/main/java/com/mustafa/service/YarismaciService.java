@@ -20,4 +20,10 @@ public class YarismaciService {
     public List<Yarismaci> findAll(){
         return yarismaciRepository.findAll();
     }
+
+//    public Yarismaci findTopByOrderByPuanDesc(){
+//        return yarismaciRepository.findTopByOrderByPuanDesc();
+//    }
+
+
 }

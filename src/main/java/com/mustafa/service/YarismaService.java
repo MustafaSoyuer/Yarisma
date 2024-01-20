@@ -23,4 +23,8 @@ public class YarismaService {
     public List<Yarisma> findAll(){
         return yarismaRepository.findAll();
     }
+
+//    public List<String> findAllByOduller(){
+//        return yarismaRepository.findAllByOduller();
+//    }
 }
